@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo módulo HTML - DIO-Santander 2025 Frontend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Nunito Sans, Poppins, sans-serif;
+            margin: 0;
+        }
+
+        /* header */
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            background: #d9d9d9;
+        }
+
+
+        /* nav */
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 5px;
+            width: 350px;
+            margin: 30px 0 120px 15px;
+        }
+
+        nav ul {
+            margin: 0;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav h2,
+        nav ul li {
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        nav ul a:nth-child(even) {
+            background-color: #f0e6ff;
+        }
+
+        nav ul a:nth-child(odd) {
+            background-color: #c299ff;
+        }
+
+        nav ul a:hover {
+            background: #ffff005b;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        #index {
+            background: #8533ff;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        /* main */
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main img {
+            margin: 30px 0;
+            width: 35%;
+            align-self: center;
+        }
+
+        main>div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            background: #c299ff;
+            padding: 0 8px;
+            /* border-radius: 8px; */
+            box-sizing: border-box;
+        }
+
+        main ol li {
+            margin: 10px 0;
+        }
+
+        p {
+            text-align: justify;
+            margin: 10px;
+        }
+
+        figure {
+            margin-top: 50px;
+        }
+
+        blockquote {
+            border-left: #00008bb3 solid 5px;
+            background: #0a0a3808;
+        }
+
+        /* footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #d9d9d9;
+            height: 80px;
+        }
+
+        /* Other */
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        mark {
+            background: rgba(255, 255, 0, 0.352);
+        }
+
+        code {
+            background: rgba(186, 185, 185, 0.5);
+            border-radius: 5px;
+        }
+
+        hr {
+            margin-top: 0;
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="top">
+        <img src="assets/dio-logo.svg" alt="Logo DIO">
+        <h1>Dio/Santander 2025 Frontend – Primeiros passos com HTML</h1>
+        <img src="assets/html.svg" alt="Logo HTML">
+    </header>
+    <hr>
+
+    <nav>
+        <h2>Índice</h2>
+        <ul>
+            <a href="#html">
+                <li><strong>O que é HTML?</strong></li>
+            </a>
+            <a href="#forms">
+                <li><strong>Trabalhando com formulários em HTML</strong></li>
+            </a>
+            <a href="#structuring">
+                <li><strong>Estruturando HTML</strong></li>
+            </a>
+            <a href="#medias">
+                <li><strong>Trabalhando com mídias</strong></li>
+            </a>
+            <a href="#tables">
+                <li><strong>Criando tabelas com HTML</strong></li>
+            </a>
+            <a href="#semantic">
+                <li><strong>Entendendo HTML semântico</strong></li>
+            </a>
+            <a href="#refs">
+                <li><strong>Lista de referências</strong></li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="html">
+            <h2>O que é HTML?</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            Quando navegamos pela internet, a estrutura e a apresentação das páginas que visualizamos são orquestradas
+            por
+            uma linguagem fundamental: o <mark><i><strong><abbr title="HyperText Markup Language">HTML</abbr> (HyperText
+                        Markup Language)</strong></i></mark>. Para o
+            usuário comum, o
+            HTML
+            pode ser
+            compreendido como o esqueleto digital de qualquer página web.
+        </p>
+        <blockquote cite="https://www.w3schools.com/html/html_intro.asp">
+            <p>
+                HTML é a linguagem de marcação padrão para criação de páginas da Web<sup><a href="#ref01">1</a></sup>
+            </p>
+        </blockquote>
+        <p>
+            Em sua essência, o HTML é uma linguagem de marcação composta por um conjunto de elementos predefinidos,
+            conhecidos como "tags". Essas tags servem como instruções para os navegadores (como Google Chrome, Mozilla
+            Firefox, Microsoft Edge, etc.), indicando a natureza e a função de cada parte do conteúdo. Por exemplo,
+            existem
+            tags específicas para definir títulos, parágrafos, imagens, listas, e hiperlinks – que são os elementos
+            clicáveis que nos levam de uma página a outra.
+        </p>
+        <p>
+            Ao processar um documento HTML, o navegador interpreta essas tags e as transforma na representação visual
+            que
+            aparece na sua tela. Sem o HTML, a web seria um amontoado desorganizado de texto e dados. Ele é o pilar que
+            confere estrutura semântica ao conteúdo, permitindo que as informações sejam organizadas de forma lógica e
+            acessível.
+        </p>
+        <p>
+            Em suma, o HTML é a base sobre a qual toda a World Wide Web é construída, definindo a estrutura e o conteúdo
+            que
+            torna a experiência online compreensível e interativa para bilhões de usuários diariamente.
+        </p>
+
+        <div id="forms">
+            <h2>Trabalhando com formulários em HTML</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            Os <mark><i><strong>formulários HTML</strong></i></mark> representam o mecanismo primário pelo qual os
+            usuários interagem e
+            fornecem dados
+            a
+            aplicações
+            web. Essencialmente, um formulário é uma coleção estruturada de elementos de entrada que possibilita a
+            coleta de
+            informações do lado do cliente para processamento no lado do servidor.
+        </p>
+        <blockquote cite="https://www.w3schools.com/html/html_forms.asp">
+            <p>
+                Um formulário HTML é usado para coletar informações do usuário. Essas informações são frequentemente
+                enviadas a um servidor para processamento.<sup><a href="#ref03">3</a></sup>
+            </p>
+        </blockquote>
+        <p>
+            Esses formulários são encapsulados pela tag <code>&lt;form&gt;</code> e integram uma variedade de controles
+            de interface,
+            tais como:
+        </p>
+        <p>
+            Campos de texto (<code>&lt;input type=&quot;text&quot;&gt;</code>): Para entrada de strings curtas, como
+            nomes
+            ou e-mails.
+        </p>
+        <p>
+            Caixas de seleção (<code>&lt;input type=&quot;checkbox&quot;&gt;</code>): Para múltiplos seleções em um
+            conjunto
+            de opções.
+        </p>
+        <p>
+            Botões de opção (<code>&lt;input type=&quot;radio&quot;&gt;</code>): Para seleção exclusiva dentro de um
+            grupo
+            de opções.
+        </p>
+        <p>
+            Áreas de texto <code>(&lt;textarea&gt;</code>): Destinadas à entrada de textos mais extensos.
+        </p>
+        <p>
+            Listas suspensas (<code>&lt;select&gt;</code>): Para escolha de uma opção predefinida em um menu.
+        </p>
+        <p>
+            Botões de submissão (<code>&lt;input type=&quot;submit&quot;&gt;</code>): Acionam o envio dos dados do
+            formulário ao servidor.
+        </p>
+        <p>
+            A funcionalidade dos formulários reside na sua capacidade de empacotar os dados inseridos pelo usuário e
+            transmiti-los para um destino especificado (geralmente um script no servidor) para validação, armazenamento
+            ou
+            processamento subsequente. Dessa forma, os formulários HTML são cruciais para a dinâmica da World Wide Web,
+            convertendo páginas estáticas em ambientes interativos que permitem a troca bidirecional de informações e a
+            execução de funcionalidades complexas, como autenticação de usuários, realização de compras e submissão de
+            conteúdo.
+        </p>
+
+        <div id="structuring">
+            <h2>Estruturando HTML</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            Uma página web pode ser vista como se fosse uma construção. Assim como uma casa precisa de uma estrutura
+            (paredes,
+            telhado), uma página web precisa das chamadas tags estruturais HTML. Elas têm um papel fundamental:
+            organizar e
+            dar sentido ao conteúdo, não só para quem visualiza, mas também para os navegadores e robôs de busca. Elas
+            formam o esqueleto de uma página web.
+        </p>
+        <p>
+            Existem várias tags, cada uma com um propósito específico. Desde o <i>'esqueleto'</i> principal que delimita
+            o
+            documento (<code>&lt;html&gt;</code>), passando pela <i>'cabeça'</i> onde ficam informações técnicas
+            (<code>&lt;head&gt;</code>) e o <i>'corpo'</i> onde tudo aparece (<code>&lt;body&gt;</code>).
+            Mas as que realmente dão forma ao conteúdo são <code>&lt;header&gt;</code> (topo),
+            <code>&lt;nav&gt;</code>
+            (navegação), <code>&lt;main&gt;</code> (conteúdo principal), <code>&lt;article&gt;</code>
+            (conteúdo independente), <code>&lt;section&gt;</code> (seções temáticas),
+            <code>&lt;aside&gt;</code> (conteúdo lateral) e <code>&lt;footer&gt;</code> (rodapé). Usá-las
+            corretamente ajuda a dividir a página em áreas distintas e lógicas.
+        </p>
+        <p>
+            A importância dessas tags vai além da organização visual. Elas trazem benefícios significativos para a
+            acessibilidade (ajudando leitores de tela para pessoas com deficiência visual), para a otimização para
+            motores
+            de busca (SEO), e para a manutenibilidade do código. Um código bem estruturado é muito mais fácil de
+            entender,
+            tanto para você quanto para outros desenvolvedores. Usar tags semânticas, em vez de um monte de
+            <code>&lt;div&gt;</code> genéricas, diz ao navegador e a outros sistemas o que cada parte da página
+            realmente é.
+        </p>
+        <p>
+            Em resumo, dominar o uso das tags estruturais e semânticas do HTML é essencial para a construção de páginas
+            web
+            robustas e de qualidade. Elas fornecem a base sólida necessária para que o conteúdo seja bem organizado,
+            acessível e compreensível, garantindo uma melhor experiência para todos que acessam o seu site e facilitando
+            a
+            vida de quem desenvolve. É um passo crucial para criar a sua presença online.
+        </p>
+
+        <div id="medias">
+            <h2>Trabalhando com mídias</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            Para construir uma página web dinâmica e interessante só texto não é suficiente. As tags HTML de mídia
+            exercem um importante papel neste contexto. Elas são as ferramentas que nos permitem incluir
+            imagens, sons e vídeos
+            diretamente no conteúdo de uma página web, transformando-a de um documento estático para uma experiência
+            muito mais rica e envolvente para quem visita.
+        </p>
+        <blockquote cite="https://www.w3schools.com/html/html_media.asp">
+            <p>
+                Multimídia na web é som, música, vídeos, filmes e animações
+            </p>
+        </blockquote>
+        <p>
+            As principais tags de mídia HTML são a tag <code>&lt;img&gt;</code> (para fotos e ilustrações); a tag
+            <code>&lt;audio&gt;</code> (para
+            músicas, podcasts ou qualquer arquivo de áudio); e a tag <code>&lt;video&gt;</code> (para incorporar
+            vídeos). Cada uma dessas tags tem seu papel específico e nos dá o controle básico para exibir ou reproduzir
+            o conteúdo que desejamos.
+        </p>
+        <p>
+            Para que essas tags funcionem corretamente, elas precisam de alguns
+            <mark><i><strong>"complementos"</strong></i></mark> – os
+            atributos. O
+            mais
+            essencial é o <mark><i><strong>src</strong></i></mark>, que aponta para o arquivo da mídia. Para áudio e
+            vídeo, podemos
+            adicionar o
+            atributo <i>controls</i> para que o usuário tenha botões de play/pause, volume, etc. Já para imagens, o
+            atributo <mark><i><strong>alt</strong></i></mark> (texto alternativo) é muito importante para acessibilidade
+            e SEO,
+            descrevendo o que a imagem
+            representa. O HTML moderno, especialmente o HTML5, trouxe muita flexibilidade, permitindo inclusive fornecer
+            diferentes formatos de arquivo para garantir a compatibilidade.
+        </p>
+        <p>
+            Em resumo, as tags de mídia são componentes fundamentais na construção de sites modernos. Elas simplificam
+            enormemente a tarefa de adicionar conteúdo multimídia, algo que no passado exigia plugins complicados.
+            Dominar o
+            uso de <code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> e seus atributos é
+            essencial para criar páginas web que não só informam, mas também cativam visual e sonoramente, tornando a
+            navegação mais dinâmica e agradável para todos.
+        </p>
+
+        <div id="tables">
+            <h2>Criando tabelas com HTML</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            As tabelas HTML são úteis quando é necessário exibir dados que se encaixam perfeitamente em linhas e
+            colunas, como uma planilha ou uma lista comparativa. Elas são o jeito padrão e mais semântico de apresentar
+            informações tabulares na web. É importante lembrar que tabelas HTML servem para dados tabulares, e não para
+            layout da página, um erro comum no passado. E tudo começa com a tag <code>&lt;table&gt;</code>.
+        </p>
+        <blockquote cite="https://www.w3schools.com/html/html_tables.asp">
+            <p>
+                As tabelas HTML permitem que desenvolvedores web organizem dados em linhas e colunas
+            </p>
+        </blockquote>
+        <p>
+            Dentro dessa tag <code>&lt;table&gt;</code>, a tabela é construída linha por linha usando a tag
+            <code>&lt;tr&gt;</code> (de 'table row'). Cada <code>&lt;tr&gt;</code> representa uma fileira horizontal na
+            sua
+            tabela. E dentro de cada <code>&lt;tr&gt;</code>, colocamos as 'células' que contêm os dados em si. Aqui
+            temos
+            dois tipos principais de células: <code>&lt;td&gt;</code> ('table data'), que é a célula comum para o
+            conteúdo
+            geral, e <code>&lt;th&gt;</code> ('table header'), usada para os títulos das colunas ou das linhas, trazendo
+            mais significado semântico e ajudando, por exemplo, na acessibilidade.
+        </p>
+        <p>
+            Para deixar a estrutura da tabela ainda mais clara e organizada, principalmente para tabelas grandes ou
+            complexas, o HTML nos dá tags como <code>&lt;thead&gt;</code> (para o cabeçalho da tabela, onde geralmente
+            ficam
+            os <code>&lt;th&gt;</code>), <code>&lt;tbody&gt;</code> (para o corpo principal com os dados, contendo os
+            <code>&lt;tr&gt;</code> e <code>&lt;td&gt;</code>), e <code>&lt;tfoot&gt;</code> (para o rodapé, talvez com
+            totais ou notas). Isso não só organiza o código, mas também ajuda na acessibilidade e na manipulação via
+            JavaScript. Podemos ainda adicionar um título geral com a tag <code>&lt;caption&gt;</code>. E pra coisas
+            mais
+            "elaboradas", existem atributos como colspan e rowspan para mesclar células, seja horizontalmente ou
+            verticalmente.
+        </p>
+        <p>
+            No fim das contas, usar as tags <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>
+            e
+            <code>&lt;th&gt;</code>, junto com as tags de estrutura (<code>&lt;thead&gt;</code>,
+            <code>&lt;tbody&gt;</code>,
+            <code>&lt;tfoot&gt;</code>) e atributos, é a forma correta e recomendada de apresentar dados em formato de
+            tabela na web. Uma tabela bem estruturada é mais acessível para leitores de tela, melhor compreendida por
+            motores de busca e robôs, e muito mais fácil de estilizar com CSS (afinal, o HTML cuida da estrutura, e o
+            CSS da
+            aparência). Dominar a criação de tabelas HTML é fundamental para exibir dados de forma clara e organizada no
+            seu
+            site.
+        </p>
+        <img src="assets/table-html.svg" alt="Uma tabela HTML simples">
+
+        <div id="semantic">
+            <h2>Entendendo HTML semântico</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <p>
+            Imaginemos que uma página web não é formada apenas por diversas caixas e texto visíveis na tela, mas um
+            documento com
+            diferentes partes que têm significados específicos. O HTML semântico encaixa-se exatamente neste contexto:
+            usar as tags
+            HTML
+            de forma que elas descrevam o tipo de conteúdo que envolvem, não
+            apenas como ele deve parecer. É dar um "nome" para parte do site, como "cabeçalho", "menu de
+            navegação", "artigo principal", etc.
+        </p>
+        <p>
+            Antigamente usava-se a tag genérica <code>&lt;div&gt;</code> para tudo, e a única forma de saber o que
+            ela
+            continha era olhando o ID ou a classe CSS. Com o HTML semântico (muito impulsionado pelo HTML5), ganhamos
+            tags
+            que já carregam um significado. Por exemplo, em vez de <code>&lt;div class="header"&gt;</code>, usamos
+            <code>&lt;header&gt;</code>. Para o menu, <code>&lt;nav&gt;</code> em vez de
+            <code>&lt;div class="menu"&gt;</code>. Temos <code>&lt;article&gt;</code> para um conteúdo independente
+            (como um
+            post de blog), <code>&lt;aside&gt;</code> para conteúdo relacionado mas não central (como uma sidebar), e
+            <code>&lt;footer&gt;</code> para o rodapé.
+        </p>
+
+        <img src="assets/html-semantico.svg" alt="HTML não semântico x HTML semântico">
+
+        <p>
+            Essas tags semânticas não só tornam o código mais legível e organizado, mas também ajudam os navegadores e
+            ferramentas de acessibilidade a entenderem melhor a estrutura de um site. Por exemplo, um leitor de tela
+            pode
+            identificar rapidamente onde está o cabeçalho, o conteúdo principal e o rodapé, facilitando a navegação para
+            pessoas com deficiência visual.
+        </p>
+        <p>
+            A importância do HTML semântico vai muito além de deixar o código mais organizado para quem está
+            desenvolvendo. O uso de tags semânticas melhora a acessibilidade, pois leitores de tela (usados por pessoas
+            com
+            deficiência visual) conseguem navegar pela estrutura da página de forma muito mais eficiente, identificando
+            as
+            diferentes seções. Também é ótimo para o SEO (otimização para motores de busca), já que robôs de busca
+            entendem
+            melhor a hierarquia e o conteúdo principal das páginas web.
+        </p>
+        <p>
+            Em suma, adotar o HTML semântico é uma prática fundamental no desenvolvimento web moderno. É construir a web
+            de
+            forma mais inteligente e inclusiva. Usar a tag correta para o propósito correto garante que uma página não
+            seja
+            apenas visualmente atraente, mas também compreensível por máquinas e acessível para pessoas, solidificando a
+            estrutura e o significado do seu conteúdo na vasta rede mundial de computadores. É um passo simples com um
+            impacto gigante na qualidade do frontend.
+        </p>
+
+        <div id="refs">
+            <h2>Lista de referências</h2><small><a href="#top">[voltar]</a></small>
+        </div>
+        <ol>
+            <li id="ref01">
+                <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">HTML Introduction - W3C
+                    Schools</a>
+            </li>
+            <li id="ref02">
+                O Que é HTML5 E Como Funciona? - Aprenda HTML Em 60 Minutos!<br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oTN3qfQ_doQ?si=nrllIHaDXG3gBmJJ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </li>
+            <li id="ref03">
+                <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">HTML Forms - W3C Schools</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form"
+                    target="_blank">Como estruturar um formulário HTML - MDN Web Docs</a>
+            </li>
+            <li>
+                <a href="https://dev.to/arthurassuncao/html5-conteudo-incorporado-e-multimidia-2kl8"
+                    target="_blank">HTML5 - Conteúdo incorporado e multimídia - Dev Community</a>
+            </li>
+            <li>
+                HTML - Tags Multimídia<br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IWX91moYtRU?si=4qrq75U-WUI6eB3x"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </li>
+            <li>
+                <a href="https://www.hashtagtreinamentos.com/tabela-em-html?conversion=base-ex-go-post-velhos&gad_source=1&gad_campaignid=16369960207&gbraid=0AAAAADLlh8__yoX9CBqQImj53jKpBn4gw&gclid=CjwKCAjwmenCBhA4EiwAtVjzmhBpm4daLiIqd5QfkplflyYqg7ZcKDc_7VdFfFe-1nnfrBgIeqHBTRoCRj0QAvD_BwE"
+                    target="_blank">Entenda o que é uma tabela em HTML e como criar com exemplos práticos - Hashtag</a>
+            </li>
+            <li>
+                <a href="https://www.devmedia.com.br/html-semantico-conheca-os-elementos-semanticos-da-html5/38065#:~:text=header%3E%20por%20p%C3%A1gina.-,section,se%C3%A7%C3%B5es/t%C3%B3picos%20de%20um%20documento."
+                    target="_blank">HTML Semântico: Conheça os elementos semânticos da HTML5 - Devmedia</a>
+            </li>
+        </ol>
+
+    </main>
+
+    <footer>
+        <p><b>Desenvolvido por Adeilton M. Santos</b></p>
+        <p><b>Projeto elaborado para o módulo sobre HTML</b></p>
+    </footer>
+</body>
+
+</html>
